@@ -10,7 +10,9 @@ mix.stylus('src/stylus/app.styl', 'dist/css')
             require('postcss-pseudo-elements-content'),
             // postcss - assets
             require('postcss-assets')({
-                loadPaths: ['dist/images/']
+                loadPaths: ['images/'],
+                basePath: 'dist/',
+                cachebuster: true
             })
         ]
     })

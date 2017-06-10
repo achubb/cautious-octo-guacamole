@@ -3,10 +3,14 @@ body
 
 section
     display: flex
-    background: resolve('../images/pizza.svg');
 
     &:before-c
         border: 1px solid red
 
     &:after-c
         border: 1px solid blue
+
+.pizza-slice
+    background: resolve('pizza.svg')
+    width: width('pizza.svg')
+    height: height('pizza.svg')
