@@ -5,6 +5,7 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: url('/dist/images/pizza.svg');
 }
 section:before {
   border: 1px solid #f00;
