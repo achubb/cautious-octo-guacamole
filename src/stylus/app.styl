@@ -14,3 +14,12 @@ section
     background: resolve('pizza.svg')
     width: width('pizza.svg')
     height: height('pizza.svg')
+
+@svg-load nav url('pizza.svg') {
+    fill: tomato
+}
+
+.pizza-slice--red
+    background: svg-inline(nav);
+    width: width('pizza.svg')
+    height: height('pizza.svg')

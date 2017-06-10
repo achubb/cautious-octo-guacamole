@@ -9,6 +9,11 @@ mix.stylus('src/stylus/app.styl', 'dist/css')
             // add content='' to psuedo elements
             require('postcss-pseudo-elements-content'),
             // postcss - assets
+            // svg inliner
+            require('postcss-inline-svg')({
+                path: 'dist/images/',
+                removeFill: true
+            }),
             require('postcss-assets')({
                 loadPaths: ['images/'],
                 basePath: 'dist/',
