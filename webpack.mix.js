@@ -4,7 +4,9 @@ mix.stylus('src/stylus/app.styl', 'dist/css')
     .options({
         postCss: [
             // autoprefixer - does what it says on the tin!
-            require('autoprefixer')
+            require('autoprefixer'),
+            // add content='' to psuedo elements
+            require('postcss-pseudo-elements-content')
         ]
     })
    .js('src/js/app.js', 'dist/js')
