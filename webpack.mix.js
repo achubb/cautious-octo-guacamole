@@ -8,16 +8,22 @@ mix.stylus('src/stylus/app.styl', 'dist/css')
             require('autoprefixer'),
             // add content='' to psuedo elements
             require('postcss-pseudo-elements-content'),
-            // postcss - assets
             // svg inliner
             require('postcss-inline-svg')({
                 path: 'dist/images/',
                 removeFill: true
             }),
+            // postcss - assets
             require('postcss-assets')({
                 loadPaths: ['images/'],
                 basePath: 'dist/',
                 cachebuster: true
+            }),
+            // sprite Generator
+            require('postcss-sprites')({
+                stylesheetPath: 'dist/css',
+	            spritePath: 'dist/images',
+                basePath: 'dist/'
             })
         ]
     })
