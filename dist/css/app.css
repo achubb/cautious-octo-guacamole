@@ -15,9 +15,7 @@ section:after {
   content: '';
 }
 .pizza-slice {
-  background-image: url(../images/sprite.svg);
-  background-position: 0px 0px;
-  background-size: 306px 306px;
+  background: url('/images/pizza.svg?15c930c2a38');
   width: 305px;
   height: 305px;
 }
@@ -39,4 +37,18 @@ section:after {
   background-size: 256px 128px;
   width: 128px;
   height: 128px;
+}
+@media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .donut {
+    background-image: url(../images/sprite.@2x.png);
+    background-position: 0px 0px;
+    background-size: 256px 128px;
+  }
+}
+@media (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .balloon {
+    background-image: url(../images/sprite.@2x.png);
+    background-position: -128px 0px;
+    background-size: 256px 128px;
+  }
 }

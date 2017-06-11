@@ -19,11 +19,21 @@ mix.stylus('src/stylus/app.styl', 'dist/css')
                 basePath: 'dist/',
                 cachebuster: true
             }),
+            // Retina Image support
+            require('postcss-at2x'),
             // sprite Generator
             require('postcss-sprites')({
                 stylesheetPath: 'dist/css',
 	            spritePath: 'dist/images',
-                basePath: 'dist/'
+                filterBy: function(image) {
+                    // Allow only png files
+                    if (!/\.png$/.test(image.url)) {
+                        return Promise.reject();
+                    }
+		            return Promise.resolve();
+                },
+                basePath: 'dist/',
+                retina: true
             })
         ]
     })
